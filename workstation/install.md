@@ -5,7 +5,7 @@ VMware Workstation pro（以下简称VMware）是一款开源用于创建虚拟�
 
 [VMware Workstation pro 17.6.4下载链接](https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Workstation%20Pro&displayGroup=VMware%20Workstation%20Pro%2017.0%20for%20Windows&release=17.6.4&os=&servicePk=533272&language=EN&freeDownloads=true)
 
-![](./images/workstation/VMware%20Workstation%20home.png)
+![](../images/workstation/VMware%20Workstation%20home.png)
 
 
 也可使用Scoop进行安装，搜索 vmware-workstation-player-np 然后进行安装
@@ -25,11 +25,11 @@ scoop install vmware-workstation-player-np
 
 2.在VMware主页中点击创建新的虚拟机，选择自定义
 
-![](./images/workstation/createWorkstationDialog-1.png)
+![](../images/workstation/createWorkstationDialog-1.png)
 
 3.在这里选择刚才下载好的windows镜像文件
 
-![](./images/workstation/createWorkstationDialog-2.png)
+![](../images/workstation/createWorkstationDialog-2.png)
 
 4.后面一直下一步至完成
 
@@ -50,34 +50,11 @@ scoop install vmware-workstation-player-np
 
 3.初始化Linux系统，选择第一个
 
-![](./images/workstation/createLinux-1.png)
+![](../images/workstation/createLinux-1.png)
 
 4.稍等一会后会出现选择语言界面，根据需求选择，然后点击继续
 
 5.弹出安装前配置选项，根据需求来进行调整，点击开始安装
 
-6.在安装的过程中进行配置root密码与创建用户，root密码必须配置，用户可以不进行创建，然后等待安装完成
-
-7.使用`ping -c 3 www.baidu.com`来进行检测网络（大概率不行） 
-
-![](./images/workstation/createWorkstationDialog-2.png)
-
-8.通过root用户登录后通过`ip addr`来查看当前ip，这里主要看第二个的网卡名，如何第二个没有显示出来ip地址，就需要重新创建网络配置
-
-9.创建网络连接配置（网卡名称为eno1677736）
-
-`sudo nmcli con add type ethernet ifname eno1677736 con-name eno1677736`
-
-创建成功提示
-
-`Connection 'eno1677736' (xxxx-xxxx-xxxx) successfully added.`
-
-10.修改为自动获取IP（DHCP）
-
-`sudo nmcli con mod eno1677736 ipv4.method auto ipv6.method ignore`
-
-11.启用连接，后面再通过`ping`进行测试，应该就可以了
-
-`sudo nmcli con up eno1677736`
-
+6.在安装的过程中进行配置root密码与创建用户，root密码必须配置，用户可以不进行创建，然后等待安装完成即可
 

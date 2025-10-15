@@ -124,3 +124,13 @@ scoop update <软件名> / *
 
 ```
 
+## 切换软件版本
+
+```
+scoop bucket add versions
+scoop install nodejs@18.17.1
+scoop install nodejs@20.11.0
+scoop reset nodejs@18.17.1  # 切换到 Node 18
+node -v                     # 验证
+```
+
