@@ -8,6 +8,14 @@ VMware Workstation pro（以下简称VMware）是一款开源用于创建虚拟�
 ![](./images/workstation/VMware%20Workstation%20home.png)
 
 
+也可使用Scoop进行安装，搜索 vmware-workstation-player-np 然后进行安装
+
+```
+scoop search vmware-workstation
+scoop install vmware-workstation-player-np
+```
+
+
 ## 创建Windows虚拟机
 > 创建过程中没有提到的直接点击下一步，这里只说需要注意的地方
 
