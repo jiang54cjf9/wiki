@@ -24,11 +24,16 @@ python310 main.py
 # 首先安装旧版 Python（推荐 3.10 或 3.11）
 # 比如下载：https://www.python.org/downloads/release/python-3119/
 # 然后创建虚拟环境
-python3.10 -m venv eegenv
+python310 -m venv eegenv
+
+// 当前版本使用python -m venv venv
+
 eegenv\Scripts\activate
 
 pip install numpy scipy matplotlib mne pywavelets torch
 python inference.py
+
+// deactivate  退出虚拟环境
 ```
 
 ## 启动 WEB 服务
